@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/fragment_action_reset"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/action_reset"
+        android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/fragment_action_save"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/action_search"
+        android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_about"
+        android:title="@string/action_about"
+        android:showAsAction="never"/>
+
+    <item android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:showAsAction="never"/>
+
+</menu>

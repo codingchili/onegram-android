@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/body">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_toolbar"
+            android:background="@color/solid"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/bottom_toolbar"
+        android:layout_alignParentTop="true"
+        android:measureWithLargestChild="false">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        <Button
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/button_rotate"
+                android:background="@android:drawable/ic_menu_rotate"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp" />
+
+        <Button
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/button_upload"
+                android:background="@android:drawable/ic_menu_upload"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/button_remove"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:elegantTextHeight="false"
+            android:layout_marginRight="8dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_area">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:id="@+id/upload_image"
+        android:background="@color/foreground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/instagram_circle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="false"
+        android:layout_gravity="left|right" />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/text_area"
+            android:background="@color/foreground">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_toolbar"
+                android:background="@color/solid"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_save"
+                        android:id="@+id/upload_save"
+                        android:checked="true"
+                    android:textColor="@color/text_solid"
+
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:buttonTint="@color/accent" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1" />
+
+                <Spinner
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filter_list"
+                    android:entries="@array/image_filters"
+                    android:prompt="@string/filter_spinner"
+                    android:theme="@style/spinnerDropDownItemStyle"
+                    style="@style/spinnerDropDownItemStyle"
+                    android:spinnerMode="dropdown"
+                    android:layout_weight="0.2"
+                    android:focusable="false" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/upload_description"
+                android:textColor="@color/text"
+                android:maxLines="5"
+                android:lines="2"
+                android:maxLength="80"
+                android:autoText="false"
+                android:hint="@string/upload_description"
+                android:textColorHint="@color/text"
+                android:gravity="start"
+                android:layout_alignParentTop="false"
+                android:layout_weight="0.5"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/bottom_toolbar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+</LinearLayout>

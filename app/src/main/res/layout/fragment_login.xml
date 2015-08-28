@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".LoginActivity$PlaceholderFragment"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_login"
+        android:background="@color/foreground"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:elevation="8dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_username"
+            android:hint="@string/hint_username"
+            android:textColor="@color/text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edit_password"
+            android:hint="@string/hint_password"
+            android:textColor="@color/text"
+            android:layout_below="@+id/edit_username"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:id="@+id/button_login"
+            android:background="@color/solid"
+            android:textColor="@color/text_solid"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/link_register"
+            android:id="@+id/button_register"
+            android:textColor="@color/accent"
+            android:layout_above="@+id/button_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:padding="16dp" />
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:id="@+id/app_logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:baselineAlignBottom="false"
+            android:src="@drawable/instagram_blend" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/foreground"
+            android:id="@+id/loading_frame"
+            android:elevation="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:id="@+id/loading_text"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/text"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:id="@+id/loading_bar"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="4dp"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

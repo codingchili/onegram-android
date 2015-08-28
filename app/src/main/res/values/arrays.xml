@@ -1,0 +1,22 @@
+<resources>
+    <string-array name="image_filters">
+        <item>No Filter</item>
+        <item>Scream</item>
+        <item>Painting</item>
+        <item>Darken</item>
+        <item>Burn</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="search_all">
+        <item>Search Latest</item>
+    </string-array>
+
+    <string-array name="report_reason">
+        <item>Illicit content</item>
+        <item>Incorrect tags</item>
+        <item>Spam / Advertising</item>
+    </string-array>
+</resources>

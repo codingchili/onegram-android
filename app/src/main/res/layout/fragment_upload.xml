@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:id="@+id/frame"
+        android:visibility="visible">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:id="@android:id/list"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/foreground"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/foreground"
+            android:layout_below="@android:id/list"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/help_frame"
+            android:elevation="8dp"
+            android:layout_margin="16dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_help_title"
+                android:id="@+id/upload_title"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_help_camera"
+                android:id="@+id/upload_camera"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="57dp"
+                android:layout_below="@+id/upload_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/upload_camera"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/button_search"
+                android:background="@color/solid"
+                android:layout_marginBottom="50dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/camera"
+                    android:id="@+id/button_camera_title"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_solid" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/camera_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/button_camera_title"
+                    android:layout_marginLeft="12dp"
+                    android:background="@android:drawable/ic_menu_camera" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_help_file"
+                android:id="@+id/upload_file"
+                android:gravity="center_horizontal"
+                android:layout_above="@+id/button_upload"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/button_upload"
+                android:background="@color/solid"
+                android:layout_below="@+id/button_search"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/file"
+                    android:id="@+id/button_file_title"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_solid" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/file_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/button_file_title"
+                    android:layout_marginLeft="12dp"
+                    android:background="@android:drawable/ic_menu_add" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/upload_license"
+                android:id="@+id/image_license"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/disclaimer_text"
+                android:gravity="bottom|center_horizontal"
+                android:layout_marginTop="100dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/upload_disclaimer"
+                android:id="@+id/disclaimer_text"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:textColor="@color/text" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
