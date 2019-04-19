@@ -4,8 +4,10 @@ Onegram is an Android application for unrestricted image sharing.
 # Background
 Onegram is an Android application for image sharing backed by a NodeJS server. It resembles Instagram in some ways but allows users to save other users uploads in their gallery. It's also possible to save any image from the application to the device. There is support for applying filters to uploaded photos, to make them look really good. or plain horrible, because some features do just that.
  
-![](onegram.png)
-
+ <p align="center">
+    <img src="onegram.png">
+ </p>
+ 
 # Features
 - upload images and share with the world.
 - save others uploads into the users gallery.
