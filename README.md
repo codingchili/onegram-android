@@ -1,4 +1,4 @@
-# onegram-android
+# Onegram for Android
 Onegram is an Android application for unrestricted image sharing. [YouTube demo](https://www.youtube.com/watch?v=86SiHCIcKv0)
  
 # Background
