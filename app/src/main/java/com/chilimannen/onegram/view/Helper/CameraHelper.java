@@ -7,7 +7,9 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 
+import com.chilimannen.onegram.BuildConfig;
 import com.chilimannen.onegram.view.Exception.CameraFailureException;
 import com.chilimannen.onegram.view.Exception.NoPictureTakenException;
 import com.chilimannen.onegram.view.Exception.FileFailureException;
@@ -30,15 +32,23 @@ public class CameraHelper {
 
     public CameraHelper(Activity activity) {
         this.activity = activity;
-    }
 
+        String[] permissions = {
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.CAMERA",
+                "android.media.action.IMAGE_CAPTURE"
+        };
+        int requestCode = 200;
+        activity.requestPermissions(permissions, requestCode);
+    }
 
 
     private void createImageFile() throws FileFailureException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES);
+
+        File storageDir = activity.getCacheDir();
         try {
             image = File.createTempFile(
                     imageFileName,
@@ -46,7 +56,7 @@ public class CameraHelper {
                     storageDir
             );
         } catch (IOException e) {
-            throw new FileFailureException();
+            throw new FileFailureException(e);
         }
     }
 
@@ -56,7 +66,9 @@ public class CameraHelper {
 
         if (intent.resolveActivity(activity.getPackageManager()) != null) {
             intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                    Uri.fromFile(image));
+                    FileProvider.getUriForFile(activity,
+                            BuildConfig.APPLICATION_ID + ".provider",
+                            image));
         } else
             throw new CameraFailureException();
 
@@ -91,7 +103,7 @@ public class CameraHelper {
         ExifInterface ei = new ExifInterface(image.getAbsolutePath());
         int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
 
-        switch(orientation) {
+        switch (orientation) {
             case ExifInterface.ORIENTATION_ROTATE_90:
                 return 90;
             case ExifInterface.ORIENTATION_ROTATE_180:
@@ -106,9 +118,9 @@ public class CameraHelper {
      */
     private void mediaScan() {
         Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        File file = new File(image.getAbsolutePath());
-        Uri contentUri = Uri.fromFile(file);
-        mediaScanIntent.setData(contentUri);
+        mediaScanIntent.setData(FileProvider.getUriForFile(activity,
+                BuildConfig.APPLICATION_ID + ".provider",
+                image));
         activity.sendBroadcast(mediaScanIntent);
     }
 }

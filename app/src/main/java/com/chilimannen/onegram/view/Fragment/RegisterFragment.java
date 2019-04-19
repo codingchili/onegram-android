@@ -162,9 +162,9 @@ public class RegisterFragment extends Fragment {
                 try {
                     throw response.getException();
                 } catch (QueryNotAcceptedException e) {
-                    showDialog(R.string.registration, R.string.registration_email_invalid);
+                    showDialog(R.string.registration, R.string.registration_credential_weak);
                 } catch (EmailInvalidException e) {
-                    showDialog(R.string.registration, R.string.registration_credential_enforcement);
+                    showDialog(R.string.registration, R.string.email_registration_mail_failed);
                 } catch (QueryConflictException e) {
                     showDialog(R.string.registration, R.string.registration_exists);
                 } catch (QueryConnectionException e) {

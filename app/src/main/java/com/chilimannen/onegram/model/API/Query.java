@@ -17,17 +17,19 @@ import javax.net.ssl.HttpsURLConnection;
 
 /**
  * @author Robin Duda
- *
+ * <p>
  * Sends a query message to the server and
  * stores the response for retrieval.
  */
-
-//todo implement put/patch/delete
 public class Query {
     private Response response = new Response();
     private Request request;
     private Certificate certificate;
 
+    /**
+     * @param request     the request to send.
+     * @param certificate the certificate to use.
+     */
     public Query(Request request, Certificate certificate) {
         this.certificate = certificate;
         this.request = request;
@@ -73,8 +75,7 @@ public class Query {
     }
 
     private void QueryPost(Request request) throws Exception {
-        URL url = null;
-        url = new URL(request.getHost() + request.getResource());
+        URL url = new URL(request.getHost() + request.getResource());
 
         HttpsURLConnection urlConnection = SecureURLConnection.setUp(url, certificate);
         try {
@@ -95,12 +96,13 @@ public class Query {
             response.setData(readStream(in));
 
         } catch (ConnectException e) {
+            e.printStackTrace();
             response.setException(new QueryConnectionException());
         } catch (IOException e) {
+            e.printStackTrace();
             // some status codes may only be retrieved after the exception has been thrown.
             response.setStatus(urlConnection.getResponseCode());
         }
-
     }
 
     public Response getResponse() {
@@ -108,7 +110,7 @@ public class Query {
     }
 
     /**
-     * @param out an output stream pointing towards a socket.
+     * @param out   an output stream pointing towards a socket.
      * @param query is the data to be written to the stream.
      */
     private void writeStream(OutputStream out, String query) {
@@ -129,16 +131,15 @@ public class Query {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         StringBuilder out = new StringBuilder();
         String line;
-
         try {
             while ((line = reader.readLine()) != null) {
                 out.append(line);
             }
             reader.close();
+            in.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return out.toString();
     }
 

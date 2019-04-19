@@ -54,13 +54,8 @@ public class FullscreenImageFragment extends Fragment {
     }
 
     private void hideStatusBar() {
-        if (Build.VERSION.SDK_INT < 16) {
-            getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else {
-            View decorView = getActivity().getWindow().getDecorView();
-            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
-        }
+        View decorView = getActivity().getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
 
    @Override
@@ -80,12 +75,8 @@ public class FullscreenImageFragment extends Fragment {
     }
 
     private void showStatusBar() {
-        if (Build.VERSION.SDK_INT < 16) {
-            getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else {
-            View decorView = getActivity().getWindow().getDecorView();
-            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-        }
+        View decorView = getActivity().getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
     }
 
     @Override

@@ -1,5 +1,10 @@
 <resources>
 
+    <!-- networking -->
+    <string name="hostname">192.168.10.183</string>
+    <string name="port">1443</string>
+    <string name="protocol">https</string>
+
     <!-- Titles -->
     <string name="app_name">1Gram</string>
     <string name="login">Login</string>
@@ -51,7 +56,7 @@
     <string name="application_error">Application error occurred.</string>
     <string name="unauthorized">Account name or password is incorrect.</string>
     <string name="registration_exists">Account already exists.</string>
-    <string name="registration_credential_enforcement">An username has to be at least 8 characters.\n\nA password must be no less than 8 characters.</string>
+    <string name="email_registration_mail_failed">Failed to send registration email.</string>
     <string name="camera_failure">Failed to open the camera.</string>
     <string name="file_failure">Error writing to file.</string>
     <string name="token_expiry">Your login token has expired.</string>
@@ -85,11 +90,17 @@
     <string name="action_reset">Reset</string>
     <string name="warning">Warning</string>
     <string name="reset_stats_dialog">Clear all saved statistics?</string>
-    <string name="registration_email_invalid">A valid email address is required.</string>
+    <string name="registration_credential_weak">
+        Please verify the following\n
+        \t- The provided email address must be valid.\n
+        \t- The username is at least 5 characters.\n
+        \t- The password is at least 8 characters.
+    </string>
     <string name="preference_thumbnails">preference_thumbnails</string>
     <string name="gallery_remove_image">Remove image from gallery?</string>
     <string name="remove">Remove</string>
     <string name="fragment_fullscreen">fragment_fullscreen</string>
     <string name="save">Save</string>
     <string name="save_to_phone">Save image to phone?</string>
+
 </resources>

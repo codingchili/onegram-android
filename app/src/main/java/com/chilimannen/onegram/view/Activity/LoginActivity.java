@@ -3,10 +3,12 @@ package com.chilimannen.onegram.view.Activity;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 
 import com.chilimannen.onegram.R;
+import com.chilimannen.onegram.model.API.Protocol;
 import com.chilimannen.onegram.view.Helper.QueryDialog;
 import com.chilimannen.onegram.view.Exception.NoTokenStoredException;
 import com.chilimannen.onegram.view.Fragment.LoginFragment;
@@ -14,7 +16,7 @@ import com.chilimannen.onegram.view.Helper.PreferenceHelper;
 
 /**
  * @author Robin Duda
- *
+ * <p>
  * Login Activity,
  * Handles the menu and fragments that are
  * available before the user has logged on.
@@ -28,6 +30,9 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Protocol.setHost(getTargetHost());
+
         setContentView(R.layout.activity_login);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
@@ -35,6 +40,17 @@ public class LoginActivity extends Activity {
                     .commit();
         }
         startGalleryIfSession();
+    }
+
+    private String getTargetHost() {
+        return String.format("%s://%s:%s",
+                fromConfig(R.string.protocol),
+                fromConfig(R.string.hostname),
+                fromConfig(R.string.port));
+    }
+
+    private String fromConfig(int id) {
+        return this.getString(id);
     }
 
     private void startGalleryIfSession() {

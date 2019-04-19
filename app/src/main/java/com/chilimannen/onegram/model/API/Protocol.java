@@ -4,12 +4,19 @@ import com.chilimannen.onegram.view.Helper.ImageReport;
 
 /**
  * @author Robin Duda
- *
+ * <p>
  * Creates a Request object containing parameters.
  */
 
 public class Protocol {
-    private static final String host = "https://ca.chilimannen.com";
+    private static String host;
+
+    /**
+     * @param hostname the hostname for the API.
+     */
+    public static void setHost(String hostname) {
+        Protocol.host = hostname;
+    }
 
     public static Request login(String username, String password) {
         String query = "username=%username%&password=%password%";
@@ -52,7 +59,7 @@ public class Protocol {
 
     public static Request downloadSearch(String tags, Token token) {
         tags = tags.replace(" ", ",");
-        String query = "/api/browse/tags?token="+token.getKey()+"&tags=" + tags;
+        String query = "/api/browse/tags?token=" + token.getKey() + "&tags=" + tags;
         return new Request(query, Method.Get, query, host);
     }
 
@@ -64,7 +71,7 @@ public class Protocol {
     }
 
     public static Request getTagSuggestions(String search, Token token) {
-        String query = "/api/browse/tagcompletion?token="+token.getKey()+"&search=" + search;
+        String query = "/api/browse/tagcompletion?token=" + token.getKey() + "&search=" + search;
         return new Request(query, Method.Get, query, host);
     }
 

@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "21.1.2"
-
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.chilimannen.onegram"
-        minSdkVersion 15
-        targetSdkVersion 22
+        applicationId "com.codingchili.onegram"
+        minSdkVersion 26
+        targetSdkVersion 28
+        multiDexEnabled true
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -19,6 +19,8 @@ android {
     }
 }
 
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v4:28.0.0'
 }
