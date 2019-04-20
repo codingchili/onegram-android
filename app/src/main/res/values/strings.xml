@@ -1,7 +1,7 @@
 <resources>
 
     <!-- networking -->
-    <string name="hostname">192.168.10.183</string>
+    <string name="hostname">85.228.205.154</string>
     <string name="port">1443</string>
     <string name="protocol">https</string>
 
