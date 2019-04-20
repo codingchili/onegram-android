@@ -78,7 +78,7 @@
                     android:id="@+id/button_camera_title"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/text_solid" />
+                    android:textColor="@color/text" />
 
                 <ImageView
                     android:layout_width="32dp"
@@ -119,7 +119,7 @@
                     android:id="@+id/button_file_title"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/text_solid" />
+                    android:textColor="@color/text" />
 
                 <ImageView
                     android:layout_width="32dp"

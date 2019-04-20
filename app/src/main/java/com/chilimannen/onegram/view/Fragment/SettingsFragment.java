@@ -101,7 +101,7 @@ public class SettingsFragment extends Fragment {
                         loadStats();
                     }
                 })
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(R.drawable.baseline_warning_black)
                 .setTitle(getString(R.string.warning))
                 .setMessage(getString(R.string.reset_stats_dialog))
                 .show();

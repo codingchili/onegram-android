@@ -34,7 +34,7 @@
                 android:layout_below="@+id/gallery_image"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:textColor="@color/text_solid"
+                android:textColor="@color/text"
                 android:layout_marginLeft="8dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="8dp" />

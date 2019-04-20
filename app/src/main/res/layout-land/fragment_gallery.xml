@@ -80,7 +80,7 @@
                     android:id="@+id/button_camera_title"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/text_solid" />
+                    android:textColor="@color/text" />
 
                 <ImageView
                     android:layout_width="32dp"
@@ -90,7 +90,7 @@
                     android:layout_toRightOf="@+id/button_camera_title"
                     android:layout_marginLeft="12dp"
                     android:background="@android:drawable/ic_menu_search"
-                    android:backgroundTint="@color/text_solid"
+                    android:backgroundTint="@color/foreground"
                     android:backgroundTintMode="multiply" />
             </RelativeLayout>
 
@@ -123,7 +123,7 @@
                     android:id="@+id/button_file_title"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/text_solid" />
+                    android:textColor="@color/text" />
 
                 <ImageView
                     android:layout_width="32dp"
@@ -133,7 +133,7 @@
                     android:layout_toRightOf="@+id/button_file_title"
                     android:layout_marginLeft="12dp"
                     android:background="@android:drawable/ic_menu_add"
-                    android:backgroundTint="@color/text_solid"
+                    android:backgroundTint="@color/foreground"
                     android:backgroundTintMode="multiply" />
             </RelativeLayout>
 

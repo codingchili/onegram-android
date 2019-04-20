@@ -87,6 +87,7 @@
     <string name="loading_failed">Loading Failed</string>
     <string name="report">Report picture</string>
     <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
     <string name="action_reset">Reset</string>
     <string name="warning">Warning</string>
     <string name="reset_stats_dialog">Clear all saved statistics?</string>

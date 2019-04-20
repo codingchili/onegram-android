@@ -28,10 +28,10 @@ public class QueryDialog {
 
     private AlertDialog.Builder makeDialog() {
         return new AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 })
-                .setIcon(android.R.drawable.ic_dialog_alert);
+                .setIcon(R.drawable.baseline_warning_black);
     }
 }
