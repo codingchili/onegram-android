@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.codingchili.onegram"
+        applicationId "com.github.codingchili.onegram"
         minSdkVersion 26
         targetSdkVersion 28
         multiDexEnabled true
