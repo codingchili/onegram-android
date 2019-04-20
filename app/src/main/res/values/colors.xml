@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- WHITE/PINK THEME -->
-<!--<resources>
+
+<!--
+Explaining the properties used for theme-ing
+
+- background: main background.
+- foreground: the content area on top of the background.
+- text: regular text views and text in input fields.
+- text_hint: the hint color in input fields.
+- text_solid: text that is displayed on top of any "solid" areas.
+- solid: the main theme color, usually a strong color.
+- active: the color of active input components.
+- toolbar: usually matches the solid color.
+- accent: used for interactive text-links.
+-->
+
+<!-- WHITE/PINK THEME --><!--<resources>
 <color name="background">#1B1B3A</color>
 <color name="foreground">#F9D6E4</color>
 <color name="text">#1B1B3A</color>
-<color name="text_hint">#F4FFF8</color>
+<color name="text_hint">#323232</color>
+<color name="text_solid">#FFFFFF</color>
 
 <color name="solid">#F92A82</color>
+<color name="active">#F92A82</color>
 <color name="toolbar">#F92A82</color>
 <color name="accent">#5603AD</color>
 </resources>-->
 
-<!-- WHITE/TEAL THEME -->
-<!--<resources>
+<!-- WHITE/TEAL THEME --><!--<resources>
 <color name="background">#4D4847</color>
 <color name="foreground">#F4FFF8</color>
-<color name="text">#4D4847</color>
-<color name="text_hint">#F4FFF8</color>
+<color name="text">#323232</color>
+<color name="text_hint">#4D4847</color>
+<color name="text_solid">#FFFFFF</color>
 
 <color name="solid">#033638</color>
+<color name="active">#033638</color>
 <color name="toolbar">#88033638</color>
 <color name="accent">#820933</color>
 </resources>-->
@@ -30,8 +47,10 @@
     <color name="foreground">#1A1919</color>
     <color name="text">#FFFFFF</color>
     <color name="text_hint">#A3FFFFFF</color>
+    <color name="text_solid">#FFFFFF</color>
 
     <color name="solid">#F1AE1C</color>
+    <color name="active">#F1AE1C</color>
     <color name="toolbar">#FFA000</color>
     <color name="accent">#BADB0000</color>
 </resources>

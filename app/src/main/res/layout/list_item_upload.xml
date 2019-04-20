@@ -29,6 +29,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:id="@+id/button_rotate"
+                android:textColor="@color/text_solid"
                 android:background="@android:drawable/ic_menu_rotate"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp" />
@@ -37,6 +38,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:id="@+id/button_upload"
+                android:textColor="@color/text_solid"
                 android:background="@android:drawable/ic_menu_upload"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"
@@ -46,6 +48,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:id="@+id/button_remove"
+            android:textColor="@color/text_solid"
             android:background="@android:drawable/ic_menu_close_clear_cancel"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"

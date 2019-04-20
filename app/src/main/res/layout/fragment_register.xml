@@ -31,8 +31,7 @@
             android:background="@color/solid"
             android:elevation="24dp"
             android:text="Register"
-            android:textColor="@color/text"
-            android:textColorHint="@color/text_hint" />
+            android:textColor="@color/text_solid" />
 
         <EditText
             android:id="@+id/edit_password_repeat"
@@ -46,6 +45,7 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="@string/hint_password_repeat"
+            android:fontFamily="sans-serif"
             android:inputType="textPassword"
             android:singleLine="true"
             android:textColor="@color/text"
@@ -83,6 +83,7 @@
             android:ems="10"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
+            android:fontFamily="sans-serif"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/text"

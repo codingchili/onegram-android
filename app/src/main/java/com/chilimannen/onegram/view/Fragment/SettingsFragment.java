@@ -71,7 +71,7 @@ public class SettingsFragment extends Fragment {
         ((UserActivity) getActivity()).setActionBarTitle(R.string.action_settings);
 
         ((ImageView) view.findViewById(R.id.app_logo)).getDrawable().setColorFilter(
-                getResources().getColor(R.color.solid),
+                getContext().getColor(R.color.solid),
                 PorterDuff.Mode.SRC_IN);
 
         ((Switch) view.findViewById(R.id.gallery_mode)).setChecked(

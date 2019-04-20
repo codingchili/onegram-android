@@ -118,7 +118,7 @@ public class LoginFragment extends Fragment {
         view.findViewById(R.id.button_register).setOnClickListener(register);
 
         ((ImageView) view.findViewById(R.id.app_logo)).getDrawable().setColorFilter(
-                getResources().getColor(R.color.solid),
+                getContext().getColor(R.color.solid),
                 PorterDuff.Mode.SRC_IN);
 
         ((EditText) view.findViewById(R.id.edit_username)).setText(preferences.getUsername());

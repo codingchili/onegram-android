@@ -92,8 +92,8 @@ public class SearchFragment extends ListFragment implements AdapterChangeListene
                 .getResources()
                 .getIdentifier("android:id/search_src_text", null, null));
 
-        searchText.setHintTextColor(getContext().getColor(R.color.text_hint));
-        searchText.setTextColor(getContext().getColor(R.color.text));
+        searchText.setHintTextColor(getContext().getColor(R.color.text_solid));
+        searchText.setTextColor(getContext().getColor(R.color.text_solid));
 
         MenuItem item = menu.findItem(R.id.fragment_action_search);
         item.expandActionView();
