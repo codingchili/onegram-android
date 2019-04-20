@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+
+<!-- WHITE/PINK THEME -->
+<!--<resources>
 <color name="background">#1B1B3A</color>
 <color name="foreground">#F9D6E4</color>
 <color name="text">#1B1B3A</color>
@@ -8,17 +10,28 @@
 <color name="solid">#F92A82</color>
 <color name="toolbar">#F92A82</color>
 <color name="accent">#5603AD</color>
-</resources>
-
-    <!-- BASE_THEME, dark teal.
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="background">#4D4847</color>
-    <color name="foreground">#F4FFF8</color>
-    <color name="text">#4D4847</color>
-    <color name="text_solid">#F4FFF8</color>
-
-    <color name="solid">#033638</color>
-    <color name="toolbar">#88033638</color>
-    <color name="accent">#820933</color>
 </resources>-->
+
+<!-- WHITE/TEAL THEME -->
+<!--<resources>
+<color name="background">#4D4847</color>
+<color name="foreground">#F4FFF8</color>
+<color name="text">#4D4847</color>
+<color name="text_solid">#F4FFF8</color>
+
+<color name="solid">#033638</color>
+<color name="toolbar">#88033638</color>
+<color name="accent">#820933</color>
+</resources>-->
+
+<!-- BLACK/GOLD THEME. -->
+<resources>
+    <color name="background">#292828</color>
+    <color name="foreground">#1A1919</color>
+    <color name="text">#FFFFFF</color>
+    <color name="text_solid">#FFFFFF</color>
+
+    <color name="solid">#F1AE1C</color>
+    <color name="toolbar">#FFA000</color>
+    <color name="accent">#BADB0000</color>
+</resources>
