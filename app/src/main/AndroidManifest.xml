@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chilimannen.onegram">
+    package="com.codingchili.onegram">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppThemeExtras">
         <activity
-            android:name="com.chilimannen.onegram.view.Activity.LoginActivity"
+            android:name="com.github.codingchili.onegram.view.Activity.LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.chilimannen.onegram.view.Activity.UserActivity"
+        <activity android:name="com.github.codingchili.onegram.view.Activity.UserActivity"
             android:windowSoftInputMode="adjustPan">
         </activity>
 
