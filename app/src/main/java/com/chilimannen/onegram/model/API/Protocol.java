@@ -49,7 +49,7 @@ public class Protocol {
         String query = "token=%token%&image=%image%";
         query = query.replace("%token%", token.getKey());
         query = query.replace("%image%", id);
-        return new Request(query, Method.Post, "/api/follow", host);
+        return new Request(query, Method.Post, "/api/save", host);
     }
 
     public static Request downloadImage(String id, Token token) {
@@ -67,7 +67,7 @@ public class Protocol {
         String query = "token=%token%&image=%image%";
         query = query.replace("%token%", token.getKey());
         query = query.replace("%image%", id);
-        return new Request(query, Method.Post, "/api/unfollow", host);
+        return new Request(query, Method.Post, "/api/unsave", host);
     }
 
     public static Request getTagSuggestions(String search, Token token) {

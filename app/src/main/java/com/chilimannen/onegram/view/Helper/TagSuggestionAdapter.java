@@ -26,7 +26,7 @@ public class TagSuggestionAdapter extends ArrayAdapter<String> {
     private TagSuggestionAdapterListener listener;
 
     public TagSuggestionAdapter(Context context) {
-        super(context, android.R.layout.simple_list_item_1);
+        super(context, R.layout.list_item_search_tags);
         this.context = context;
     }
 
